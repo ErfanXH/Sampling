@@ -25,6 +25,8 @@ rejection_ae_vals = []
 likelihood_ae_vals = []
 gibbs_ae_vals = []
 
+print("\n")
+
 for i in range(len(queries)):
     exact_val = exact_inference(queries[i], evidences[i], cpts, graph)
     prior = prior_sample(queries[i], evidences[i], cpts, graph, V)
@@ -32,7 +34,12 @@ for i in range(len(queries)):
     likelihood = likelihood_sample(queries[i], evidences[i], cpts, graph, V)
     gibbs = gibbs_sample(queries[i], evidences[i], cpts, graph, V)
 
-    print(f"exact_val: {exact_val}\tprior: {prior}\trejection: {rejection}\tlikelihood: {likelihood}\tgibbs: {gibbs}\n")
+    print(f"Query {i+1}:")
+    print(f"exact_val: {exact_val}")
+    print(f"prior: {prior}")
+    print(f"rejection: {rejection}")
+    print(f"likelihood: {likelihood}")
+    print(f"gibbs: {gibbs}\n")
 
     # Add the desirable AE(Average Error) to the corresponding list for each method
     prior_ae_vals.append(abs(exact_val - prior))
@@ -46,9 +53,9 @@ rejection_ae_avg = sum(rejection_ae_vals) / len(rejection_ae_vals)
 likelihood_ae_avg = sum(likelihood_ae_vals) / len(likelihood_ae_vals)
 gibbs_ae_avg = sum(gibbs_ae_vals) / len(gibbs_ae_vals)
 
-print("prior average error: ", prior_ae_avg)
-print("rejection average error: ", rejection_ae_avg)
-print("likelihood average error: ", likelihood_ae_avg)
-print("gibbs average error: ", gibbs_ae_avg)
+print("prior average error: ", round(prior_ae_avg, 5))
+print("rejection average error: ", round(rejection_ae_avg, 5))
+print("likelihood average error: ", round(likelihood_ae_avg, 5))
+print("gibbs average error: ", round(gibbs_ae_avg, 5), "\n")
 
 draw_plot(prior_ae_vals, rejection_ae_vals, likelihood_ae_vals, gibbs_ae_vals, "Chart")

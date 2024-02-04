@@ -38,7 +38,7 @@ Exact Inference and Approximate Inference are two methods used in probabilistic 
   The result and the error of each sampling (<i>Prior Sampling</i>, <i>Rejection Sampling</i>, <i>Likelihood Sampling</i> and <i>Gibbs Sampling</i>) are as follows:
   </p>
   <a href=""><img src="Images/result.png" alt='image' width="40%" height='400'/></a>
-  <a href=""><img src="Images/error.png" alt='image' width="40%" height='400'/></a>
+  <a href=""><img src="Images/error.png" alt='image' width="40%" height='520'/></a>
 </div>
 
 ## :toolbox: Getting Started

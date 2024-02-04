@@ -1,4 +1,5 @@
 import json
+import globals
 
 def read_queries(path):
     # read from file
@@ -22,15 +23,15 @@ def read_queries(path):
 
         for k, v in query.items():
             if v == 1:
-                query_new[map_vertex[k]] = True
+                query_new[globals.map_vertex[k]] = True
             else:
-                query_new[map_vertex[k]] = False
+                query_new[globals.map_vertex[k]] = False
         
         for k, v in evidence.items():
             if v == 1:
-                evidence_new[map_vertex[k]] = True
+                evidence_new[globals.map_vertex[k]] = True
             else:
-                evidence_new[map_vertex[k]] = False
+                evidence_new[globals.map_vertex[k]] = False
 
         queries.append(query_new)
         evidences.append(evidence_new)

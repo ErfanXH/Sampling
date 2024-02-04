@@ -2,7 +2,10 @@ import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
-import utils
+from utils import draw_plot
+from load import load_model
+from query import read_queries
+import globals
 
 IN_PATH = ".\Data"
 OUT_PATH = ".\Out"

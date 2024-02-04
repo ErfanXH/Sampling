@@ -1,3 +1,5 @@
+import globals
+
 def load_model(path):
     V = 0
     
@@ -21,8 +23,8 @@ def load_model(path):
         else:
             continue
 
-    global map_vertex
-    map_vertex = map_name_number
+    #global map_vertex
+    globals.map_vertex = map_name_number
 
     Graph = {
         'parents_nodes': [[] for _ in range(V)],

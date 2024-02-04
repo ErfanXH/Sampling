@@ -2,10 +2,16 @@ import os
 import json
 import numpy as np
 import matplotlib.pyplot as plt
+
 from utils import draw_plot
 from load import load_model
 from query import read_queries
-import globals
+
+from exact import exact_inference
+from prior import prior_sample
+from rejection import rejection_sample
+from likelihood import likelihood_sample
+from gibbs import gibbs_sample
 
 IN_PATH = ".\Data"
 OUT_PATH = ".\Out"

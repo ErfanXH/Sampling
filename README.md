@@ -28,7 +28,7 @@ Exact Inference and Approximate Inference are two methods used in probabilistic 
   <p>
   Here we are given the following <i>Bayesian Network</i> and we would like to calculate some probabilities, that are refered to as <i>Queries</i>.
   </p>
-  <img src="Data/input.png" width="40%" height='400'/>
+  <img src="Data/input.png" width="50%" height='400'/>
 </div>
 <br/>
 

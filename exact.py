@@ -1,4 +1,4 @@
-import utils
+from utils import variable_elimination
 
 def exact_inference(query, evidence, cpts, graph):
     new_cpts = []

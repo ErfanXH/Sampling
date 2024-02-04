@@ -81,4 +81,4 @@ def gibbs_sample(query, evidence, cpts, graph, n):
         if flag:
             query_satisfied += 1
 
-    return query_satisfied / num_samples
+    return query_satisfied / globals.num_samples
